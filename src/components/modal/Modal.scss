@@ -1,0 +1,27 @@
+@import "../variables.scss";
+
+.modal-header {
+  width: calc(100% - 48px);
+  height: 10px;
+  border-bottom: 1px solid $lightGrey;
+  padding: 24px;
+  font-size: 24px;
+  font-weight: bold;
+  color: $title;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .icon-cancel {
+    font-size: 24px;
+  }
+}
+
+div[aria-label="globalModal"] {
+  @media only screen and (max-width: 680px) {
+    max-width: unset !important;
+    max-height: unset !important;
+    border-radius: 0px !important;
+    height: 100%;
+  }
+}

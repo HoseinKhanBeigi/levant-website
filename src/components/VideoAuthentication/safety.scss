@@ -1,0 +1,102 @@
+@import "../variables.scss";
+
+.advantagesContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  border-radius: 1rem;
+  background: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+  padding: 1.5rem;
+  position: relative;
+  top: -124px;
+  width: 88%;
+  margin: auto;
+  max-width: 97rem;
+  height: unset;
+
+  @media screen and (max-width: 1430px) {
+    flex-direction: column;
+  }
+  @media screen and (max-width: 1024px) {
+    padding: 2.5rem 1.5rem;
+    top: -180px;
+  }
+  @media screen and (max-width: 425px) {
+    width: 75%;
+    padding: 1.5rem;
+  }
+
+  .sideLeft {
+    display: block;
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    width: 20%;
+    z-index: 0;
+    @media screen and (max-width: 1440px) {
+      font-size: 22px;
+    }
+    @media screen and (max-width: 1024px) {
+      padding-top: 10px;
+      padding-bottom: 70px;
+    }
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+      padding-bottom: 35px;
+    }
+  }
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start; /* Even space around items */
+  align-items: stretch; /* Ensures equal height */
+  gap: 16px;
+  width: 76%;
+  @media screen and (max-width: 1440px) {
+    width: 98%;
+  }
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+    gap: 0;
+  }
+  @media screen and (max-width: 768px) {
+    gap: 16px;
+  }
+  @media screen and (max-width: 710px) {
+    justify-content: center;
+  }
+}
+
+.flex-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 2rem;
+  min-width: 226px;
+  @media screen and (max-width: 425px) {
+    padding: 0;
+  }
+
+  .item {
+    display: flex;
+    gap: 0.4rem;
+    align-items: center;
+
+    .item-color {
+      color: #3f3f3f;
+    }
+  }
+}
+
+.sideRight {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}

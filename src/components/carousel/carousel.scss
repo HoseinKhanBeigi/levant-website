@@ -1,0 +1,53 @@
+@import "../variables.scss";
+
+.carouselContainer {
+  position: relative;
+  max-width: 1152px;
+  margin: 0 auto;
+  overflow-x: hidden;
+  height: 235px;
+}
+
+.arrowLeftButton {
+  position: absolute;
+  left: 2px;
+  top: 30%;
+  background-color: white !important;
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 10px !important;
+  span {
+    font-size: 32px;
+  }
+}
+
+.deActiveArrow {
+  background-color: white;
+  span {
+    color: gray;
+  }
+}
+
+.arrowRightButton {
+  position: absolute;
+  right: 2px;
+  top: 30%;
+  background-color: white !important;
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 10px !important;
+  span {
+    font-size: 32px;
+  }
+}
+
+.deActiveSlides {
+  width: 324px;
+  height: 149px;
+  padding: 8px;
+  margin: 0px 12px 20px 12px;
+  border-radius: 12px;
+  box-shadow: 0 24px 42px 0 rgba(0, 0, 0, 0.16);
+  background-color: #fff;
+  opacity: 0.5;
+}

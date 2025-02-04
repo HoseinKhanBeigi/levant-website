@@ -1,0 +1,13 @@
+projectKind: "front"
+
+service:
+  port: 80
+
+ingress:
+  hosts:
+    - domain: levants.io
+      defaultSubdomains: false
+      tls:
+        enabled: true
+      paths:
+        - /(?!blog/)(.*)

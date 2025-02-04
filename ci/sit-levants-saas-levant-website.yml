@@ -1,0 +1,16 @@
+projectKind: "front"
+
+service:
+  port: 80
+
+extraConfig:
+  PASSWORD: ${PASSWORD}
+
+ingress:
+  hosts:
+    - domain: web.sit.levants.io
+      defaultSubdomains: false
+      tls:
+        enabled: true
+      paths:
+        - /(?!blog/)(.*)

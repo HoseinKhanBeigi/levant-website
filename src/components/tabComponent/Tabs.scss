@@ -1,0 +1,148 @@
+@import "../variables.scss";
+
+.tabs-container {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  max-width: 1600px;
+  margin: auto;
+  width: 100%;
+  height: 80%;
+}
+
+.tab-buttons {
+  display: flex;
+  border-radius: 8px;
+  height: 5.12rem;
+  margin: 2rem;
+  @media screen and (max-width: 900px) {
+    margin: 2rem 0;
+  }
+}
+
+.tab-button {
+  height: 100%;
+  width: 100%;
+  padding: 10px 20px;
+  border: 1px solid white;
+  background-color: #ecf1fe;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  @media screen and (max-width: 900px) {
+    font-size: 16px;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 12px;
+  }
+
+  &:first-child {
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+
+  &:last-child {
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+  }
+}
+
+.tab-button.active {
+  background-color: #1b1aff;
+  color: white;
+  border-color: #1b1aff;
+
+  &:hover {
+    background-color: #1b1aff;
+  }
+}
+
+.tab-button:hover {
+  background-color: #7fa3ff;
+  color: white;
+}
+
+.tab-content-container {
+  border: 1px solid #ddd;
+  padding: 2rem 4rem 3rem;
+  border-radius: 8px;
+  background-color: #f5f7fa;
+  margin: 0 2rem;
+  height: 70%;
+  @media screen and (max-width: 900px) {
+    margin: 0;
+  }
+}
+
+.tab-content {
+  height: 100%;
+  font-size: 16px;
+  color: #333;
+}
+
+.crmMainEquipments {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  row-gap: 3rem;
+  padding: 0 2rem;
+}
+
+.apiContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.apiDescription {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 1rem;
+}
+
+.ocrSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  width: 100%;
+}
+
+.ocrItems {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  row-gap: 1rem;
+  padding: 0 2rem;
+  flex-wrap: wrap;
+
+  .ocrRight,
+  .ocrLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 50%;
+    gap: 1rem;
+    min-width: 320px;
+  }
+}
+
+.ocrItem {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.usages .ocrItem {
+  @media screen and (max-width: 900px) {
+    min-width: 225px;
+  }
+}

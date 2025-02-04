@@ -1,0 +1,153 @@
+
+.accordion {
+  display: flex;
+  width: 63rem;
+  height: 63%;
+  gap: 1rem;
+  margin: auto;
+  max-height: 33rem;
+  margin-top: -1rem;
+  @media screen and (max-width: 900px) {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    display: flex;
+    gap: 1rem;
+    margin: 0 auto;
+    max-height: unset;
+  }
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 2rem;
+  }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 9rem;
+  }
+  @media screen and (max-width: 425px) {
+    margin-bottom: 6rem;
+  }
+}
+
+.accordion-item {
+  flex: 1;
+  position: relative;
+  transition: flex 0.3s ease;
+  cursor: pointer;
+  background: #3076F9;
+  margin: 0 5px;
+  border-radius: 10px;
+  @media screen and (max-width: 900px) {
+    width: 90%;
+    margin: auto;
+  }
+}
+
+.accordion-item.active {
+  flex: 7;
+
+  .accordion-title {
+    background-color: white;
+    color: black;
+  }
+
+  .accordion-content {
+    background-color: white;
+  }
+}
+
+.accordion-title {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  @media screen and (max-width: 900px) {
+    height: 5rem;
+    writing-mode: unset;
+    transform: rotate(0);
+  }
+
+
+  .accordionHeaderContainer {
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    display: flex;
+    margin: 2.15rem;
+    //color: #444;
+    color: white;
+    align-items: center;
+    justify-content: start;
+    padding: 0.2rem;
+    gap: 1rem;
+    @media screen and (max-width: 900px) {
+      height: 5rem;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      font-size: 14px;
+    }
+    @media screen and (max-width: 375px) {
+      font-size: 13px;
+    }
+  }
+}
+
+.accordion-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //transition: opacity 0.3s ease;
+  background: white;
+  border-radius: 10px;
+  padding: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  @media screen and (max-width: 900px) {
+
+    padding: 2rem 1rem;
+  }
+
+}
+
+.accordion-item.active .accordion-content {
+  opacity: 1;
+  pointer-events: all;
+  max-height: unset;
+  @media screen and (min-width: 1025px) {
+    max-height: 380px; /* Adjust based on your content's height */
+  }
+  @media screen and (min-width: 769px) {
+    max-height: 450px; /* Adjust based on your content's height */
+  }
+}
+
+.content-box h2 {
+  color: #333;
+}
+
+.content-box p {
+  margin-top: 10px;
+  color: #666;
+}
+
+.features {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.features span {
+  background: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}

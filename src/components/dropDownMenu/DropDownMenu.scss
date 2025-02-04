@@ -1,0 +1,55 @@
+.dropDownContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.dropDownBackdrop {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.dropDownTitle {
+  color: #000;
+  text-align: justify;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  cursor: pointer;
+}
+
+.dropdownListContainer {
+  position: absolute;
+  top: 47px;
+  right: 10px;
+  width: 229px;
+  padding: 8px;
+  border-radius: 4px;
+  box-shadow: 0 24px 42px 0 rgba(0, 0, 0, 0.16);
+  background-color: white;
+  z-index: 1;
+}
+
+.dropdownListTitle {
+  font-size: 14px;
+  color: black;
+  padding: 8px 2px;
+  cursor: pointer;
+  display: block;
+
+  &:hover {
+    background-color: rgba(128, 164, 255, 0.8);
+    color: white;
+  }
+}
+
+.dropDownTitleContainer {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 8px;
+}

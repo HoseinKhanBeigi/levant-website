@@ -1,0 +1,67 @@
+@import "../variables.scss";
+
+.ExplanationContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% - 64px);
+  max-width: 1152px;
+  margin: auto;
+  margin-top: 177px;
+  margin-bottom: 237px;
+
+  @media only screen and (max-width: 1144px) {
+    flex-direction: column-reverse;
+    margin-top: 89px;
+    margin-bottom: 80px;
+  }
+
+  @media only screen and (max-width: 776px) {
+    width: calc(100% - 32px);
+  }
+}
+
+.ExplanationContent {
+  max-width: 460px;
+
+  @media only screen and (max-width: 1144px) {
+    margin-top: 48px;
+    max-width: unset;
+  }
+}
+
+.ExplanationTitle {
+  font-size: 24px;
+  font-weight: bold;
+  color: $title;
+}
+
+.ExplanationDesc {
+  font-size: 16px;
+  line-height: 2;
+  color: $midGreySubtitle;
+  margin: 24px 0px 32px 0px;
+}
+
+.ExplanationImage {
+  width: 624px !important;
+  height: 356px !important;
+
+  @media only screen and (max-width: 1144px) {
+    margin-bottom: 80px;
+  }
+
+  @media only screen and (max-width: 776px) {
+    width: 343px !important;
+    height: 194px !important;
+  }
+}
+
+.moreInfoButton {
+  width: 144px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: $midGreySubtitle;
+}

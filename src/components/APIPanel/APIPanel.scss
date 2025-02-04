@@ -1,0 +1,139 @@
+.api-panel-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 140px 40px;
+  border-radius: 10px;
+  max-width: 100rem;
+  margin: auto;
+  @media screen and (max-width: 900px) {
+    width: 80%;
+    margin: auto;
+  }
+  //@media screen and (max-width: 900px) {
+  //  padding: 140px 40px;
+  //}
+}
+
+.apiContainer {
+  padding: 3rem 0;
+}
+
+.panel-image {
+  width: 45%;
+  height: 100%;
+  text-align: center;
+  margin: auto;
+  @media screen and (max-width: 900px) {
+    width: 100%;
+    height: 45%;
+    margin: 3rem 0;
+  }
+  @media screen and (max-width: 1024px) {
+    width: 49%;
+  }
+
+  div {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    @media screen and (max-width: 1024px) {
+
+    }
+  }
+}
+
+.panel-image img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.panel-description {
+  width: 45%;
+  margin-top: -2rem;
+}
+
+.api-panel-section h2 {
+  margin-bottom: 2rem;
+  text-align: right;
+  width: 100%;
+
+  @media screen and (max-width: 900px) {
+    text-align: center;
+  }
+}
+
+.api-panel-section h3 {
+  color: #F5A622;
+  margin-bottom: 0;
+  text-align: right;
+  width: 100%;
+
+  @media screen and (max-width: 900px) {
+    text-align: center;
+  }
+}
+
+
+.checkbox-container {
+  margin-right: 15px;
+  margin-top: 87px;
+}
+
+.checkbox_item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+
+.button-container {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-test {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-advice {
+  background-color: #f5f5f5;
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-test:hover,
+.btn-advice:hover {
+  opacity: 0.8;
+}
+
+.panelWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  width: 100%;
+  @media screen and (max-width: 900px) {
+    flex-direction: column-reverse;
+  }
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+  margin-top: 6rem;
+  @media screen and (max-width: 900px) {
+    justify-content: center;
+  }
+}

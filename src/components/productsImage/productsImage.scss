@@ -1,0 +1,24 @@
+.productsImage {
+    width: 100% !important;
+    max-width: 1344px !important;
+    height: 806px !important;
+    @media only screen and (max-width: 1222px) {
+        max-width: 704px !important;
+        height: 422px !important;
+    }
+    @media only screen and (max-width: 674px) {
+        max-width: 375px !important;
+        height: 224px !important;
+    }
+}
+
+.productsImageWrapper {
+    width: 100%;
+    margin-top: 112px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media only screen and (max-width: 1222px) {
+        
+    }
+}

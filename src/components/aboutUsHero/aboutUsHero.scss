@@ -1,0 +1,152 @@
+.aboutUs {
+  @media screen and (max-width: 768px) {
+    padding-bottom: 40px !important;
+    h2 {
+      margin-top: 25px !important;
+    }
+  }
+}
+
+.about-section {
+  background-color: #4A90E2;
+  color: white;
+  padding: 30px;
+  margin: 20px 0;
+  border-radius: 10px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-section h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.about-section p {
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.history-section {
+  background-color: #fff;
+  color: #333;
+  padding: 50px 0;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 1600px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  @media screen and (max-width: 1075px) {
+    justify-content: center;
+  }
+}
+
+.history-section.blue {
+  @media screen and (max-width: 375px) {
+    width: 100% !important;
+  }
+}
+
+.history-section h3 {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.history-content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  text-align: right;
+  width: 50%;
+  margin-top: -96px;
+  @media screen and (max-width: 1600px) {
+    margin-top: 0;
+  }
+  @media screen and (max-width: 1075px) {
+    width: 100%;
+  }
+
+}
+
+.history-content h3 {
+  color: #2F75F9;
+}
+
+.history-image {
+  width: 40%;
+  height: auto;
+  border-radius: 5px;
+  min-width: 250px;
+}
+
+.blueSection {
+  background: #2F75F9FF;
+  color: white;
+  padding: 50px;
+  padding-bottom: 220px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  @media screen and (max-width: 425px) {
+    padding: 25px;
+  }
+  @media screen and (max-width: 600px) {
+    margin-bottom: 0;
+  }
+  @media screen and (max-width: 1075px) {
+    flex-direction: column-reverse;
+    justify-content: revert;
+    align-items: center;
+    flex-wrap: unset;
+    padding-bottom: 50px;
+
+  }
+  @media screen and (max-width: 375px) {
+
+  }
+}
+
+/* Milestone section styling */
+.milestone-section {
+  background-color: #4A90E2;
+  color: white;
+  padding: 30px;
+  border-radius: 10px;
+  margin: 20px 0;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.milestone-section p {
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.milestone-images {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.milestone-image {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  border-radius: 5px;
+}

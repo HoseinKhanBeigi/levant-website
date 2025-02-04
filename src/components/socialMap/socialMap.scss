@@ -1,0 +1,67 @@
+$primary-color: #3a70b0;
+$text-color: #fff;
+$background-light: #e9eff5;
+@mixin flex-center($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+.social-map {
+  width: 60%;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  padding: 2.5rem;
+  text-align: center;
+  margin: auto;
+  @media screen and (max-width: 1315px) {
+    width: 100%;
+    padding: 2.5rem 0;
+    gap: 4rem;
+  }
+
+  .social-media {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 20%;
+    @media screen and (max-width: 1315px) {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    a {
+      font-size: 2.5rem;
+    }
+
+
+    p {
+      font-size: 20px;
+      font-weight: 600;
+      color: black;
+    }
+  }
+
+  .mapContainer {
+    width: 100%;
+    height: 100%;
+    background: red;
+    border-radius: 8px;
+    overflow: hidden;
+
+    .map {
+      width: 100%;
+      height: 300px;
+      margin: 0 auto;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+  }
+}

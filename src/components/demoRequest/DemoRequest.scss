@@ -1,0 +1,177 @@
+@import "../variables.scss";
+
+.demoRequestBody {
+  height: calc(100% - 93px);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 0;
+
+  @media only screen and (max-width: 680px) {
+    margin-top: 22px;
+  }
+}
+
+.titleWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .icon-demoRequest {
+    margin-left: 11px;
+
+    &::before {
+      font-size: 26px;
+      color: $primary;
+    }
+  }
+}
+
+.demoRequestRow {
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 32px);
+  margin: 24px auto 16px;
+
+  @media only screen and (max-width: 680px) {
+    flex-direction: column;
+    margin: 0px auto;
+  }
+}
+
+.inputWrapper {
+  width: 100% !important;
+  margin-left: 12px;
+
+  &:last-of-type {
+    margin-left: 0px;
+  }
+
+  @media only screen and (max-width: 680px) {
+    margin-bottom: 24px;
+  }
+  @media only screen and (max-width: 425px) {
+    margin-bottom: 5px;
+  }
+}
+
+.submitDemo {
+  width: 45%;
+  margin-left: 18px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+
+  @media only screen and (min-width: 680px) {
+    width: 100%;
+    margin-left: 0px;
+  }
+}
+
+.cancelDemo {
+  width: 45%;
+  font-size: 18px;
+  font-weight: 500;
+
+  @media only screen and (min-width: 680px) {
+    display: none;
+  }
+}
+
+.popupFooter {
+  @extend .demoRequestRow;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 16px;
+
+  @media only screen and (max-width: 680px) {
+    padding-bottom: 16px;
+  }
+}
+
+//captcha
+.captchaContainer {
+  width: 100%;
+  border-top: 1px solid $lightGrey;
+}
+
+.captchaWrapper {
+  display: flex;
+  align-items: center;
+
+  @media only screen and (max-width: 680px) {
+    flex-direction: column-reverse;
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+}
+
+.captchaCodeWrapper {
+  width: 100%;
+  margin-left: 13px;
+
+  @media only screen and (max-width: 680px) {
+    margin-left: 0px;
+  }
+}
+
+.captchaImageContainer {
+  display: flex;
+  align-self: center;
+}
+
+.captchaCodeContainer {
+  width: 100%;
+  border-radius: 10px;
+
+  .icon-recaptcha {
+    font-size: 32px;
+    color: $primary !important;
+  }
+
+  @media only screen and (max-width: 680px) {
+    margin-bottom: 24px;
+  }
+}
+
+.captchaImageWrapper {
+  width: 100%;
+  height: 54px;
+  border-radius: 0px 10px 10px 0px;
+  border: solid 1px $lightGrey;
+}
+
+.captchaImage {
+  width: 100%;
+  height: 100%;
+}
+
+.reloadCaptcha {
+  width: 56px;
+  height: 56px;
+  border: solid 1px $lightGrey;
+  border-right: 1px solid transparent;
+  border-radius: 10px 0px 0px 10px;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fixed-top-content {
+  height: 26px;
+}
+
+.fixed-down-content {
+  height: 18px;
+}
+
+.ReactModalPortal .ReactModal__Overlay {
+  z-index: 1000 !important;
+  @media only screen and (max-width: 680px) {
+    margin-top: 84px;
+  }
+}
+
+

@@ -1,0 +1,32 @@
+@import "../variables.scss";
+
+.collapseItemContainer {
+  margin: 12px 0px;
+  cursor: pointer;
+}
+
+.collapseItemTitle {
+  font-size: 16px;
+  font-weight: bold;
+  color: $title;
+  margin-left: 4px;
+}
+
+.collapseItemTitleNumber {
+  // @extend.collapseitemtitle;
+  white-space: nowrap;
+}
+
+.collapseItemWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.collapseButton {
+  align-self: end;
+  margin-right: 4px;
+}
+
+.collapseContentWrapper {
+  margin-top: 12px;
+}

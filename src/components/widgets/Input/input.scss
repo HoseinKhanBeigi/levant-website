@@ -1,0 +1,45 @@
+@import "../../variables.scss";
+
+.inputContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  input {
+    width: calc(100% - 27px) !important;
+    height: 52px;
+    border-radius: 10px;
+    border: 1px solid $lightGrey;
+    background-color: $white;
+    padding-right: 24px;
+    @media screen and (max-width: 425px) {
+      height: 36px;
+    }
+
+    &::placeholder {
+      font-size: 16px;
+      color: $lightGrey;
+      margin: 16px 24px;
+    }
+
+    &:focus-visible {
+      outline: 1px solid $primary !important;
+      border: none;
+    }
+  }
+}
+
+.inputError {
+  color: $red;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.inputLabel {
+  font-size: 16px;
+  font-weight: bold;
+  color: $title;
+  margin-bottom: 4px;
+}

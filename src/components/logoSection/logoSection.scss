@@ -1,0 +1,80 @@
+.logoSection {
+  margin-top: -4rem;
+}
+
+.LogoSectionContainer {
+  text-align: center;
+  max-width: 100rem;
+  width: 100%;
+  margin-top: 10rem;
+
+
+  .title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .logoGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    width: 80%;
+    margin: auto;
+
+    &:nth-child(1) {
+      padding-right: unset;
+    }
+
+    .logoItem {
+      display: flex;
+      justify-content: center;
+    }
+
+    .logoImage {
+      width: 100px;
+      height: auto;
+    }
+  }
+}
+
+.logoGrid {
+
+  --gap: 2rem;
+  --line-offset: calc(var(--gap) / 2);
+  --line-thickness: 2px;
+  --line-color: lightgray;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  overflow: hidden;
+  gap: var(--gap);
+}
+
+.logoItem {
+  position: relative;
+}
+
+.logoItem::before,
+.logoItem::after {
+  content: '';
+  position: absolute;
+  background-color: var(--line-color);
+  z-index: 1;
+}
+
+.logoItem::after {
+  inline-size: 100vw;
+  block-size: var(--line-thickness);
+  inset-inline-start: 0;
+  inset-block-start: calc(var(--line-offset) * -1);
+}
+
+.logoItem::before {
+  inline-size: var(--line-thickness);
+  block-size: 100vh;
+  inset-inline-start: calc(var(--line-offset) * -1);
+}

@@ -1,0 +1,125 @@
+@import "../variables.scss";
+
+.accompanyingContainer {
+  width: calc(100% - 64px);
+  //padding: 80px 32px 0px;
+  max-width: 1152px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  @media only screen and (max-width: 900px) {
+    width: calc(100% - 32px);
+    padding: 80px 16px 0px;
+  }
+}
+
+.accompanyingTitle {
+  font-size: 24px;
+  font-weight: bold;
+  color: $title;
+  margin-bottom: 64px;
+
+  @media only screen and (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+.accompanyingItemContainer {
+  width: 100%;
+  //display: flex;
+  align-items: center;
+  cursor: pointer;
+  display: grid;
+  grid-template-rows: 12rem 12rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 0.5rem;
+  column-gap: 0.5rem;
+  @media only screen and (max-width: 900px) {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.accompanyingItemWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  height: 60%;
+  max-width: 292px;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 24px 42px 0 rgba(0, 0, 0, 0.08);
+  background-color: $white;
+  margin-left: 16px;
+  border: solid 1px transparent;
+
+  &:last-of-type {
+    margin-left: 0px;
+  }
+
+  span::before {
+    font-size: 64px;
+  }
+
+  &:hover {
+    border: solid 1px $primary;
+
+    span::before {
+      color: $primary;
+    }
+  }
+
+  @media only screen and (max-width: 1024px) {
+    max-width: 192px;
+    padding: 16px;
+
+    span::before {
+      font-size: 42px;
+    }
+  }
+
+  @media only screen and (max-width: 900px) {
+    width: calc(100% - 32px);
+    margin-bottom: 24px;
+    max-width: unset;
+    margin-left: 0px;
+
+    span::before {
+      font-size: 64px;
+    }
+  }
+}
+
+.accompanyingItemContentWrapper {
+  margin-right: 36px;
+  font-size: 14px;
+  min-width: 120px;
+  font-weight: bold;
+  color: $midGreySubtitle;
+
+  @media only screen and (max-width: 1024px) and (min-width: 776px) {
+    font-size: 10px;
+  }
+}
+
+.accompanyingItemNumber {
+  font-size: 36px;
+  font-weight: bold;
+  color: $primary;
+  margin: 8px 0px;
+
+  span {
+    font-size: 24px;
+    margin-right: 4px;
+  }
+
+  @media only screen and (max-width: 1024px) and (min-width: 776px) {
+    font-size: 22px;
+  }
+}

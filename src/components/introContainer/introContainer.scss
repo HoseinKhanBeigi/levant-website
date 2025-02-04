@@ -1,0 +1,132 @@
+@import "../variables.scss";
+
+.introSectionContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fafcff;
+  // padding: 0px 60px;
+  padding-top: 150px;
+  position: relative;
+  height: 728px;
+  width: 100%;
+
+  @media only screen and (max-width: 1024px) {
+    height: unset;
+  }
+}
+
+.introSectionWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1152px;
+  width: 100%;
+  //background-color: red;
+
+  @media only screen and (max-width: 1156px) {
+    align-items: center;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    margin-top: 64px;
+  }
+
+  @media only screen and (max-width: 900px) {
+    margin-top: 0px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+  }
+}
+
+.introSectionTitle {
+  font-size: 24px;
+  font-weight: bold;
+  color: $title;
+  margin-bottom: 6px;
+  margin-top: 32px;
+
+  //@media only screen and (max-width: 900px) {
+  //  font-size: 16px;
+  //}
+}
+
+.introSectionSubTitle {
+  font-size: 16px;
+  line-height: 2;
+  color: $midGreySubtitle;
+  max-width: 372px;
+  white-space: initial;
+  text-align: justify;
+
+  //@media only screen and (max-width: 1024px) {
+  //  font-size: 12px;
+  //}
+  //
+  //@media only screen and (max-width: 900px) {
+  //  max-width: unset;
+  //}
+}
+
+.buttonSectionWrapper {
+  display: flex;
+  margin-top: 31px;
+
+  @media only screen and (max-width: 900px) {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.demoRequestSectionButton {
+  width: 139px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: normal;
+  margin-left: 16px;
+
+  .demoRequestIcon {
+    font-size: 20px;
+    margin-right: 8px;
+  }
+
+  //
+  //@media only screen and (max-width: 900px) {
+  //  width: 100%;
+  //}
+}
+
+.introSectionContentWrapper {
+  padding: 16px;
+  //@media only screen and (max-width: 1185px) {
+  //  margin-right: 32px;
+  //}
+  //
+  //@media only screen and (max-width: 900px) {
+  //  width: calc(100% - 32px);
+  //  margin-right: 0px;
+  //  margin: auto;
+  //  margin-top: 64px;
+  //  margin-bottom: 47px;
+  //}
+}
+
+.imageSectionWrapper {
+  display: flex;
+  align-items: center;
+  width: calc(100% - 10px) !important;
+  padding: 0px 10px;
+  max-height: 473px !important;
+  max-width: 690px !important;
+
+  //@media only screen and (max-width: 900px) {
+  //  margin-top: 10px;
+  //  width: calc(100% - 10px) !important;
+  //  max-height: 473px !important;
+  //  max-width: 690px !important;
+  //}
+}

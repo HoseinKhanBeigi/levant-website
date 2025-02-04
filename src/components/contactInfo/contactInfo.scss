@@ -1,0 +1,154 @@
+@mixin flex-center($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+$primary-color: #2F75F9;
+$secondary-color: #ffffff;
+$text-color: #ffffff;
+$background-color: #e9eff5;
+$card-bg: #ffffff;
+$card-border-radius: 8px;
+
+.contact-info {
+  text-align: center;
+  height: 575px;
+  padding-top: 144px;
+  padding-bottom: 110px;
+
+  h2 {
+    color: white;
+    margin-top: 100px;
+    font-weight: bold;
+    font-size: 30px !important;
+    @media screen and (max-width: 600px) {
+      margin-top: 0;
+      margin-bottom: 100px;
+    }
+  }
+
+  p {
+    text-align: justify;
+    justify-self: center;
+    width: 80%;
+    //font-size: 1.2rem !important;
+    margin-top: 2rem;
+    max-width: 1600px;
+    line-height: 30px !important;
+    @media screen and (max-width: 600px) {
+      width: 80%;
+    }
+    //@media screen and (max-width: 320px) {
+    //  font-size: 1.1rem !important;
+    //}
+
+  }
+
+  .details {
+    @include flex-center(row, space-around, center);
+    margin: 20px 0;
+    background: #e9eff5;
+    padding: 20px;
+  }
+
+  .info-block {
+    padding: 10px;
+  }
+}
+
+.contact-info {
+  background-color: $primary-color;
+  color: $text-color;
+  text-align: center;
+
+
+  h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 1em;
+    margin: 10px 0 30px;
+    line-height: 1.5;
+  }
+
+  .details-cards {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    width: 80%;
+    max-width: 1600px;
+    position: absolute;
+    top: 390px;
+    @media screen and (max-width: 320px) {
+      top: 432px;
+    }
+    @media screen and (max-width: 1440px) {
+      top: 420px;
+    }
+    @media screen and (max-width: 1078px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (max-width: 550px) {
+      grid-template-columns: repeat(1, 1fr);
+      top: 405px !important;
+    }
+    @media screen and (max-width: 768px) {
+      top: 450px;
+    }
+  }
+
+  .card {
+    background-color: $card-bg;
+    color: $primary-color;
+    min-width: 150px;
+    width: 80%;
+    height: 90px;
+    padding: 20px;
+    border-radius: $card-border-radius;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 10px;
+    @media screen and (max-width: 550px) {
+      width: unset;
+    }
+
+    &:hover {
+      transform: translateY(-10px);
+    }
+
+    .card-title {
+      font-weight: bold;
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: #00257F;
+    }
+
+    .card-content {
+      font-size: 1rem;
+      font-weight: normal;
+      word-wrap: break-word;
+      color: #00257F;
+    }
+  }
+}
+
+.contactDesc {
+  text-align: center !important;
+  width: max-content;
+  max-width: 1400px;
+  @media screen and (max-width: 1471px) {
+    text-align: justify !important;
+  }
+}

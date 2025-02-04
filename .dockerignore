@@ -1,0 +1,9 @@
+ci
+docs
+.gitignore
+.git
+README.md
+node_modules
+# To prevent storing dev/temporary container data
+*.csv
+tmp

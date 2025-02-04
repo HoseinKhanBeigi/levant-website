@@ -1,0 +1,157 @@
+@import "../variables.scss";
+
+.featuresContainer {
+  width: calc(100% - 64px);
+  max-width: 1152px;
+  margin: 88px auto;
+
+  @media only screen and (max-width: 779px) {
+    width: 100%;
+  }
+}
+
+.featuresTitle {
+  font-size: 24px;
+  font-weight: bold;
+  color: $title;
+  margin-bottom: 8px;
+
+  @media only screen and (max-width: 776px) {
+    font-size: 16px;
+  }
+}
+
+.featureIcon {
+  margin-left: 16px;
+}
+
+.featuresSubTitle {
+  font-size: 14px;
+  color: $midGreySubtitle;
+  margin-bottom: 32px;
+
+  @media only screen and (max-width: 776px) {
+    font-size: 12px;
+    margin-left: 16px;
+  }
+}
+
+.featureTitle {
+  display: flex;
+  width: max-content;
+  height: 28px;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.16);
+  background-color: #e3ecfd;
+  font-size: 16px;
+  font-weight: bold;
+  color: $title;
+  margin-left: 16px;
+  cursor: pointer;
+  white-space: nowrap;
+
+  span::before {
+    font-size: 24px;
+    color: $title !important;
+  }
+
+  @media only screen and (max-width: 776px) {
+    font-size: 12px !important;
+    height: 18px;
+  }
+}
+
+.activeTitle {
+  // @extend.featuretitle;
+  background-color: $title;
+  color: $white;
+
+  span::before {
+    color: $white !important;
+  }
+}
+
+.featuresListWrapper {
+  display: flex;
+
+  @media only screen and (max-width: 776px) {
+    overflow-x: scroll;
+    scrollbar-width: none !important;
+    padding: 8px 0px;
+    padding-right: 16px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: 64px;
+  flex-wrap: wrap;
+
+  @media only screen and (max-width: 776px) {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 16px;
+    margin-top: 48px;
+  }
+}
+
+.featuresHeaderWrapper {
+  @media only screen and (max-width: 776px) {
+    margin-right: 16px;
+  }
+}
+
+.subfeatureContainer {
+  width: 311px;
+  margin-left: 61px;
+  padding: 8px 16px;
+  border-radius: 12px;
+  box-shadow: 0 24px 42px 0 rgb(0 0 0 / 8%);
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 32px;
+
+  &:last-of-type {
+    margin-left: 0px;
+  }
+
+  @media only screen and (max-width: 776px) {
+    margin-bottom: 16px;
+    margin-left: 0px;
+
+    &:last-of-type {
+      margin-bottom: 0px;
+    }
+  }
+}
+
+.subFeatureIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 16px;
+  width: 80px;
+  min-width: 80px;
+  height: 80px;
+  min-height: 80px;
+  font-size: 42px;
+  border-radius: 40px;
+  background-color: $primary;
+}
+
+.subFeatureTitleWrapper {
+  font-size: 14px;
+  text-align: center;
+  font-weight: bold;
+  color: $title;
+  text-align: right;
+}

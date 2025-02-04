@@ -1,0 +1,63 @@
+@import "../variables.scss";
+
+.cloudContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% - 64px);
+  max-width: 1152px;
+  margin: auto;
+
+  @media only screen and (max-width: 1144px) {
+    flex-direction: column-reverse;
+  }
+
+  @media only screen and (max-width: 779px) {
+    width: calc(100% - 32px);
+  }
+}
+
+.cloudContent {
+  margin-bottom: 40px;
+  @media only screen and (max-width: 1144px) {
+    max-width: unset;
+  }
+}
+
+.cloudTitle {
+  font-size: 24px;
+  font-weight: bold;
+  color: $title;
+  margin-top: 100px;
+  margin-bottom: 24px;
+}
+
+.cloudDesc {
+  font-size: 16px;
+  line-height: 2;
+  color: $midGreySubtitle;
+  text-align: justify;
+}
+
+.cloudImage {
+  width: 624px !important;
+  height: 356px !important;
+
+  @media only screen and (max-width: 1144px) {
+    margin-bottom: 80px;
+  }
+
+  @media only screen and (max-width: 776px) {
+    width: 343px !important;
+    height: 194px !important;
+  }
+}
+
+.moreInfoButton {
+  width: 144px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: $midGreySubtitle;
+}

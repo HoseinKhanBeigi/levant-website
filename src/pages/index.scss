@@ -1,0 +1,310 @@
+@import "../components/variables.scss";
+
+
+* {
+  font-family: var(--text-font);
+}
+
+p {
+  font-family: var(--text-font);
+  color: var(--para-text);
+  font-size: calc(var(--width) / 20);
+  margin-top: 1rem;
+  text-align: justify;
+  text-justify: inter-word;
+  @media screen and (max-width: 860px) {
+    font-size: 0.9rem;
+  }
+}
+
+h1 {
+  font-size: $h1;
+}
+
+h2 {
+  font-size: $h2;
+  @media screen and (max-width: 375px) {
+    font-size: 1.4rem;
+  }
+}
+
+h3 {
+  font-size: $h3;
+}
+
+h4 {
+  font-size: $h4;
+}
+
+h5 {
+  font-size: $h5;
+}
+
+p {
+  text-align: justify;
+  line-height: 2rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-size: 28px;
+  color: #1b1aff;
+  margin-bottom: 10px;
+  z-index: 4;
+  position: relative;
+  @media screen and (max-width: 768px) {
+    font-size: 22px;
+  }
+}
+
+.section-subtitle {
+  font-size: 19px;
+  color: #666;
+  text-align: center;
+  z-index: 2;
+  position: relative;
+  width: 75%;
+  margin: auto;
+  margin-bottom: 4rem;
+  margin-top: 0rem;
+  font-weight: 300;
+  @media screen and (max-width: 425px) {
+    text-align: justify;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: var(--bg);
+  font-family: var(--title-font);
+  font-size: calc(var(--width) / 23);
+  @media screen and (max-width: 826px) {
+    font-size: 0.86rem;
+  }
+
+  &:hover {
+    color: #2d80ff;
+  }
+}
+
+section {
+  padding: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  width: 100%;
+  margin-top: -7rem;
+  //@media screen and (max-width: 900px) {
+  //  width: 80%;
+  //  margin: auto;
+  //  padding: 4rem 0;
+  //}
+}
+
+.safetyWrapper {
+  @media only screen and (max-width: 1440px) {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  @media only screen and (max-width: 1144px) {
+    height: unset;
+  }
+}
+
+.productsImage {
+  width: 1344px !important;
+  height: 806px !important;
+}
+
+.collapseContainer {
+  width: calc(100% - 64px);
+  max-width: 1152px;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.collapseTitle {
+  font-size: 24px;
+  font-weight: bold;
+  color: $title;
+  margin: 0 0 32px 0;
+}
+
+.animatable {
+  /* initially hide animatable objects */
+  visibility: hidden;
+
+  /* initially pause animatable objects their animations */
+  animation-play-state: paused;
+}
+
+/* show objects being animated */
+.animated {
+  visibility: visible;
+
+  animation-fill-mode: both;
+  animation-duration: 1s;
+  animation-play-state: running;
+}
+
+.realistic-marker-highlight {
+  position: relative !important;
+}
+
+.realistic-marker-highlight:before {
+  content: "" !important;
+  background-color: #ffc700 !important;
+  width: 100% !important;
+  height: 1em !important;
+  position: absolute !important;
+  z-index: -1 !important;
+  filter: url(#marker-shape) !important;
+  left: -0.25em !important;
+  top: 0.5em !important;
+  padding: 0 0.25em !important;
+}
+
+/* CSS Animations (extracted from http://glifo.uiparade.com/) */
+@keyframes fadeIn {
+  0%,
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes bounceInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-2000px);
+  }
+  60% {
+    transform: translateX(20px);
+  }
+  80% {
+    transform: translateX(-5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounceInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(2000px);
+  }
+  60% {
+    transform: translateX(-20px);
+  }
+  80% {
+    transform: translateX(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveUp {
+  0% {
+    transform: translateY(40px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeBgColor {
+  0%,
+  70% {
+    background: none;
+  }
+  100% {
+    background: #464646;
+  }
+}
+
+.animated.animationDelay {
+  animation-delay: 0.4s;
+}
+
+.animated.animationDelayMed {
+  animation-delay: 1.2s;
+}
+
+.animated.animationDelayLong {
+  animation-delay: 1.6s;
+}
+
+.animated.fadeBgColor {
+  animation-name: fadeBgColor;
+}
+
+.animated.bounceIn {
+  animation-name: bounceIn;
+}
+
+.animated.bounceInRight {
+  animation-name: bounceInRight;
+}
+
+.animated.bounceInLeft {
+  animation-name: bounceInLeft;
+}
+
+.animated.fadeIn {
+  animation-name: fadeIn;
+}
+
+.animated.fadeInDown {
+  animation-name: fadeInDown;
+}
+
+.animated.fadeInUp {
+  animation-name: fadeInUp;
+}
+
+.animated.moveUp {
+  animation-name: moveUp;
+}
