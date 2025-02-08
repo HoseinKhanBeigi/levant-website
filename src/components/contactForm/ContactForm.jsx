@@ -70,7 +70,6 @@ const ContactForm = () => {
     });
 
     const tes = await response.json();
-
     console.log(tes, "tes");
 
     const message = `{name: ${formData?.name},email: ${formData?.email},phone: ${formData?.phone},message: ${formData?.message}}`;
