@@ -69,7 +69,9 @@ const ContactForm = () => {
       body: JSON.stringify(formData),
     });
 
-    await response.json();
+    const tes = await response.json();
+
+    console.log(tes, "tes");
 
     const message = `{name: ${formData?.name},email: ${formData?.email},phone: ${formData?.phone},message: ${formData?.message}}`;
     if (message.length > 1024) {
