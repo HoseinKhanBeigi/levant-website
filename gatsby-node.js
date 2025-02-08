@@ -34,19 +34,19 @@ exports.createPages = async ({ actions }) => {
   });
 
   // ✅ Prevent API redirect issues
-  createRedirect({
-    fromPath: "/api/send-email",
-    toPath: "/api/send-email",
-    statusCode: 200, // Ensure the API does not get redirected
-    isPermanent: false,
-  });
+  // createRedirect({
+  //   fromPath: "/api/send-email",
+  //   toPath: "/api/send-email",
+  //   statusCode: 200, // Ensure the API does not get redirected
+  //   isPermanent: false,
+  // });
 
-  createRedirect({
-    fromPath: "/api/*",
-    toPath: "/api/:splat",
-    statusCode: 200, // Allow all API routes to work properly
-    isPermanent: false,
-  });
+  // createRedirect({
+  //   fromPath: "/api/*",
+  //   toPath: "/api/:splat",
+  //   statusCode: 200, // Allow all API routes to work properly
+  //   isPermanent: false,
+  // });
 };
 
 exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {

@@ -63,15 +63,15 @@ const ContactForm = () => {
     }
     const apiBaseUrl = "https://web.sit.levants.io"; // Force HTTPS
 
-    const response = await fetch(`${apiBaseUrl}/api/send-email`, {
+    const response = await fetch(`/api/send-email`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
     });
 
-    const data = await response.json();
+    await response.json();
 
-    const message = `{name: ${formData?.fullName},email: ${formData?.email},phone: ${formData?.mobile},message: ${formData?.message}}`;
+    const message = `{name: ${formData?.name},email: ${formData?.email},phone: ${formData?.phone},message: ${formData?.message}}`;
     if (message.length > 1024) {
       toast.error("متن پیام شما بسیار بلند است لطفا پیام خود را ویرایش کنید.", {
         position: "bottom-right",

@@ -1,8 +1,4 @@
 export default async function handler(req, res) {
-  if (req.method !== "POST") {
-    return res.status(405).json({ message: "Method Not Allowed" });
-  }
-
   // ✅ Import Nodemailer dynamically for Gatsby functions
   const nodemailer = require("nodemailer");
 
@@ -16,23 +12,35 @@ export default async function handler(req, res) {
   }
 
   // ✅ Configure Gmail SMTP
+  // h.khanbeigi@kian.digital
+  // Hosein9092@
+
+  // hoseinkhanbeigi@gmail.com
+  // 90923032
+
+  // smtp.gmail.com
+  // mail.levants.io
   const transporter = nodemailer.createTransport({
-    host: "mail.levants.io",
-    port: 587, // Use 465 for SSL, 587 for TLS
-    secure: false, // False for TLS (587), true for SSL (465)
+    host: "mail.levants.io", // ✅ Use the hostname WITHOUT "https://"
+    port: 587, // ✅ Use 465 for SSL or 587 for TLS
+    secure: false, // ✅ true if using port 465, false for port 587
     auth: {
-      user: "web@levants.io", // Your Gmail email
-      pass: EMAIL_PASS, // Use App Password, NOT your real Gmail password
+      user: "h.khanbeigi@kian.digital", // Your Gmail email
+      pass: "Hosein9092@", // Use App Password, NOT your real Gmail password
     },
+    tls: { rejectUnauthorized: false },
   });
 
   try {
     // ✅ Send email
+    // web@levants.io
+    // a.nikjoo@kian.digital
     await transporter.sendMail({
-      from: "web@levants.io",
-      to: "support@levants.io", // Replace with recipient's email
-      subject: `New Contact from ${name}`,
-      text: `From: ${name} (${email})\n\nMessage: ${message}`,
+      from: "h.khanbeigi@kian.digital",
+      to: "a.nikjoo@kian.digital", // Replace with recipient's email
+      subject: "Here's a Random pic Picture! 🐶",
+      html: `
+             <p>Enjoy your day! demo-2😊</p>`,
     });
 
     return res.status(200).json({ message: "Email sent successfully!" });
